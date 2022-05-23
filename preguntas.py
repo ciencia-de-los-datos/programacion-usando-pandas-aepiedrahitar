@@ -205,11 +205,11 @@ def pregunta_10():
                 value_list.append(str(sub_element_2))
                 value_list.sort()      
         join_element = ":".join(value_list)
-        join_c2_list.append(join_element)
+        join_c2_list.append(str(join_element))
     df_1 = pd.DataFrame()
     df_1["_c1"] = column_c1_ordered
     df_1["_c2"] = join_c2_list
-    return df_1
+    return df_1.set_index("_c1")
 
 def pregunta_11():
     """
